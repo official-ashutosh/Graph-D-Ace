@@ -1,0 +1,16 @@
+{
+  "short_name": "Graph D Ace",
+  "name": "Graph D Ace",
+  "description": "Professional graph algorithms visualizer and analysis tool",  "icons": [
+    {
+      "src": "images/graph-d-ace-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4facfe",
+  "background_color": "#ffffff",
+  "categories": ["education", "productivity", "developer"]
+}
