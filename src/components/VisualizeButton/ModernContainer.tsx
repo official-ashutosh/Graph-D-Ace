@@ -152,6 +152,11 @@ const Container = styled.div<Props>`
     left: 100%;
   }
 
+  /* Make sure button is visible and clickable */
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+
   /* Responsive design */
   @media (max-width: 1024px) {
     width: 160px;

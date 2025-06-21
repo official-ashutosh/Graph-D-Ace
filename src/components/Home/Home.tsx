@@ -4,7 +4,6 @@ import LeftSidebar from "../SideNav/LeftSidebar";
 import RightSidebar from "../SideNav/RightSidebar";
 import DualToggleButton from "../SideNav/DualToggleButtonComponent";
 import GraphCanvas from "../GraphCanvas/GraphCanvas";
-import VisualizeButton from "../VisualizeButton/VisualizeButton";
 import WelcomeScreen from "../WelcomeScreen/WelcomeScreen";
 import Footer from "../Footer/Footer";
 import algorithms from "../../algorithms";
@@ -254,9 +253,12 @@ const Home: React.FC<HomeProps> = (props: HomeProps): ReactElement => {
         backdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(255,255,255,0.2)'
       }}>
-        <Navbar
+        {/* Modern Navbar with Visualize Button */}
+        <Navbar 
+          changeTheme={props.changeTheme} 
           onHelpClick={props.onHelpClick}
-          changeTheme={props.changeTheme}
+          onVisualize={handleVisualize}
+          isVisualizing={isVisualizing}
         />
       </div>
       
@@ -321,14 +323,7 @@ const Home: React.FC<HomeProps> = (props: HomeProps): ReactElement => {
             addNewEdge={addNewEdge}
             clearCanvas={clearCanvas}
           />
-          
-          {/* Floating Action Button */}
-          <div className="floating-button-wrapper animate-scale-in">
-            <VisualizeButton
-              onClick={handleVisualize}
-              isVisualizing={isVisualizing}
-            />
-          </div>
+            {/* Floating button removed - now in navbar */}
         </div>
       </div>
       

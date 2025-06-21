@@ -10,7 +10,11 @@ const VisualizeButton: React.FC<Props> = (props: Props): ReactElement => {
   return (
     <Container
       isVisualizing={props.isVisualizing}
-      onClick={() => props.onClick()}
+      onClick={() => {
+        if (!props.isVisualizing) {
+          props.onClick();
+        }
+      }}
     >
       {props.isVisualizing ? (
         <>

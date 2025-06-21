@@ -68,18 +68,16 @@ const DropdownList = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   z-index: 1000;
-  
   background: ${(props) => props.theme.sidebar.background};
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 2px solid rgba(79, 172, 254, 0.3);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  
-  max-height: ${(props) => props.isOpen ? '300px' : '0'};
+  max-height: 340px;
   opacity: ${(props) => props.isOpen ? '1' : '0'};
-  overflow: hidden;
-  
+  overflow-y: auto;
+  overflow-x: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: ${(props) => props.isOpen ? 'slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1)' : 'none'};
   

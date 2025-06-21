@@ -150,6 +150,19 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Floating Button Wrapper */
+.floating-button-wrapper {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.floating-button-wrapper:hover {
+  transform: translateY(-5px);
+}
+
 .perfect-shadow {
   box-shadow: 
     0 2px 4px rgba(0, 0, 0, 0.05),

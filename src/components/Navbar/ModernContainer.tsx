@@ -20,13 +20,12 @@ const slideInAnimation = css`
 
 const Container = styled.div<Props>`
   ${slideInAnimation}
-  
   z-index: 1000;
   position: relative;
   width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
+  height: 74px;
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
   align-items: center;
   background: ${(props) => props.theme.navbar.background};
   color: ${(props) => props.theme.navbar.foreground};
@@ -34,7 +33,7 @@ const Container = styled.div<Props>`
   -webkit-backdrop-filter: ${(props) => props.theme.navbar.backdropFilter};
   border-bottom: ${(props) => props.theme.navbar.borderBottom};
   box-shadow: ${(props) => props.theme.navbar.boxShadow};
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   transition: ${(props) => props.theme.animations?.transition || 'all 0.3s ease'};
   animation: slideInFromTop 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -54,19 +53,21 @@ const Container = styled.div<Props>`
 
   /* Responsive design */
   @media (max-width: 1024px) {
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
+    grid-template-columns: 160px 1fr 180px;
+    height: 62px;
   }
 
   @media (max-width: 768px) {
-    height: 60px;
-    padding: 0 1rem;
+    height: 56px;
+    padding: 0 0.5rem;
+    grid-template-columns: 110px 1fr 120px;
   }
 
   @media (max-width: 550px) {
-    height: 60px;
-    padding: 0 1rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    height: 48px;
+    padding: 0 0.2rem;
+    grid-template-columns: 70px 1fr 70px;
   }
 `;
 
